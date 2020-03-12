@@ -3,3 +3,4 @@
 import initStoryshots from "@storybook/addon-storyshots";
 
 initStoryshots();
+console.log('snapshot testing');
