@@ -37,6 +37,18 @@ export const actionsData= {
 
 export const Default =() => {
     return <Task task ={{ ...taskData, state:'TASK_PINNED' }}  {...actionsData} />
-
-
 };
+
+// function to view pinned task my darling shea butter baby
+
+export const Pinned =()=> (
+    <Task task={{...taskData, state: 'TASK_PINNED'}}{...actionsData}    />
+
+);
+
+// function for archiving out magical tasks 
+
+export const Archived = () => (
+
+    <Task task = {{...taskData, state: 'TASK_ARCHIVED'}}{...actionsData}    />
+);
