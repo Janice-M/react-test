@@ -17,6 +17,15 @@ export default function Task ({task: {id,title, state}, onArchiveTask, onPinTask
             <div className="title">
                 <input type="text" value={title} readOnly ={true} placeholder="Input Magical Task Title"  />
             </div>
+
+            <div className="actions" onClick={event => event.stopPropagation()}>
+                { state !== 'TASK_ARCHIVED'&&(
+                    <a onClick={() => onPinTask (id)} >
+                        <span className= {`icon-star`} />
+                    </a>
+                )
+            }    
+            </div> 
         </div>
 
 
