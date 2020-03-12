@@ -14,6 +14,8 @@ export default{
 
 };
 
+//function for the data we need for magical tasks habibty
+
 export const taskData= {
 
     id: '1',
@@ -29,4 +31,12 @@ export const taskData= {
 export const actionsData= {
     onPinTask: action('onPinTask'),
     onArchiveTask: action ('onArchiveTask'),
+};
+
+//function to view all tasks hayaty
+
+export const Default =() => {
+    return <Task task ={{ ...taskData, state:'TASK_PINNED' }}  {...actionsData} />
+
+
 };
