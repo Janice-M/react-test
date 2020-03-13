@@ -6,15 +6,15 @@ import Task from  './Task';
 function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
     const events = {
         onPinTask,
-      onArchiveTask,
-    };
-  
+        onArchiveTask,
+        };
+
     if (loading) {
-      return <div className="list-items">loading</div>;
+    return <div className="list-items">loading</div>;
     }
-  
+
     if (tasks.length === 0) {
-      return <div className="list-items">empty</div>;
+    return <div className="list-items">empty</div>;
     }
   
     return (
