@@ -26,4 +26,17 @@ export default {
     { ...taskData, id: '6', title: 'Task 6' },
   ];
 
+//pinned task
+
+export const withPinnedTasksData = [
+    ...defaultTasksData.slice(0, 5),
+    { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
+  ];
   
+  export const Default = () => <TaskList tasks={defaultTasksData} {...actionsData} />;
+  
+  export const WithPinnedTasks = () => <TaskList tasks={withPinnedTasksData} {...actionsData} />;
+  
+  export const Loading = () => <TaskList loading tasks={[]} {...actionsData} />;
+  
+  export const Empty = () => <TaskList tasks={[]} {...actionsData} />;
