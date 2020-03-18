@@ -18,9 +18,18 @@ function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
           </div>
         );
 
-    if (loading) {
-    return <div className="list-items">loading</div>;
-    }
+        if (loading) {
+          return (
+            <div className="list-items">
+              {LoadingRow}
+              {LoadingRow}
+              {LoadingRow}
+              {LoadingRow}
+              {LoadingRow}
+              {LoadingRow}
+            </div>
+          );
+        }
 
     if (tasks.length === 0) {
     return <div className="list-items">empty</div>;
